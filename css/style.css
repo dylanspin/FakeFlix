@@ -1,0 +1,14 @@
+html,body{
+  margin: 0;
+  background-color: #141414;
+}
+.logo{
+  color:#E50914;
+  font-family: 'BebasNeueRegular';
+  font-size: 3em;
+  font-weight: 550;
+  transform: translate(90px,20px);
+}
+.center{
+  text-align: center;
+}
