@@ -1,14 +1,58 @@
 html,body{
+  font-family: 'Staatliches'; /*font*/
   margin: 0;
   background-color: #141414;
+  overflow-x: hidden;
+  height: 750px;
 }
-.logo{
+/*Buttons*/
+button.manage{
+  font-size: 23px;
+  font-weight: 100;
+  width: 240px;
+  height: 40px;
+  color: #6F6F6F;
+  border: 1px solid #6F6F6F;
+  background-color: #141414;
+  transform: translate(20px,150px);
+}
+button.manage:hover{
+  color: white;
+  border: 1px solid white;
+}
+
+.image{/*img profile*/
+  height: 200px;
+  width: 200px;
+}
+.logo{/*Dylflix logo*/
   color:#E50914;
   font-family: 'BebasNeueRegular';
   font-size: 3em;
   font-weight: 550;
   transform: translate(90px,20px);
 }
-.center{
+.center{/*Center div*/
   text-align: center;
+}
+.kop{/*grote wite text*/
+  font-size: 80px;
+  color: white;
+  transform: translate(0px,50px);
+}
+.user{/*user div*/
+  border: 4px;
+  margin-left: 30px;
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 25px;
+  color: #6F6F6F;
+  transform: translate(0px,100px);
+}
+.user:hover{/*user div hover*/
+  color: white;
+  transform: scale(1.05,1.05) translate(0px,100px);
 }

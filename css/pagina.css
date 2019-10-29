@@ -1,0 +1,184 @@
+html,body{
+  font-family: 'Staatliches'; /*font*/
+  margin: 0;
+  background-color: #141414;
+  height: 750px;
+}
+video{
+  object-fit: cover;
+}
+a{
+  color: #6F6F6F;
+  width: 200px;
+  text-decoration: none;
+  margin-left: 100px;
+}
+a:hover{
+  text-decoration: underline;
+}
+td{
+  height: 30px;
+}
+button.service{
+  font-size: 15px;
+  border: 1px solid #6F6F6F;
+  padding: 7px;
+  background-color: inherit;
+  color: #6F6F6F;
+}
+button.service:hover{
+  color: white;
+  border-radius: 1px solid white;
+}
+.content{
+  position: absolute;
+  top: 545px;
+  width: 100%;
+  height: 500px;
+}
+
+.vid{
+  position: absolute;
+  margin-top: 0px;
+  width: 100%;
+  height: 800px;
+  border: none;
+}
+.logo{/*Dylflix logo*/
+  color:#E50914;
+  font-family: 'BebasNeueRegular';
+  font-size: 3em;
+  font-weight: 550;
+  transform: translate(90px,20px);
+}
+.center{/*Center div*/
+  text-align: center;
+}
+.header{
+  background-color: #141414;
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  right:0;
+  z-index: 1;
+}
+.header_con{
+  transform: translate(0px,-10px);
+}
+.header_button{/*Header buttons*/
+  margin-left: 15px;
+  background-color: inherit;
+  color: #DCDCDC;
+  border:none;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.header_button:hover{
+  color: white;
+  transform: scale(1.05,1.05);
+}
+.buttons{
+  transform: translate(240px,-45px);
+}
+.icons{
+  display: inline-block;
+  transform: translate(635px,0px);
+}
+.icon{
+  transition: 0.3s;
+  color: white;
+  font-size: -10px;
+  margin-left: 20px;
+}
+.search_bar{/*search bar voor de search icon*/
+  display: inline-block;
+}
+.image{
+  height: 40px;
+  width: 40px;
+  transform: translate(35px,10px);
+}
+.movie{
+  width: 220px;
+  height: 130px;
+  background-color: white;
+  background-color: inherit;
+  display: inline-block;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+.movie:hover{
+  transform: scale(1.35,1.35);
+}
+.movies{
+  width: 400vw;
+  display: block;
+  margin-left: -290px;
+  margin-top: 35px;
+}
+.film{
+  width: 220px;
+  height: 130px;
+}
+.links{
+  opacity: 0.2;
+  background-color: black;
+  position: absolute;
+  padding-top: 40px;
+  padding-left: 65px;
+  width: 80px;
+  height: 92px;
+  color: white;
+  transform: translate(-2868px,-136px);
+}
+.links:hover{
+  opacity: 0.7;
+}
+.rechts{
+  opacity: 0.2;
+  background-color: black;
+  position: absolute;
+  padding-top: 40px;
+  padding-left: -65px;
+  width: 100px;
+  height: 92px;
+  color: white;
+  transform: translate(-1360px,-136px);
+}
+.rechts:hover{
+  opacity: 0.7;
+}
+
+.naam{
+  width: 200px;
+  text-align: left;
+  font-weight: 400;
+  font-family:Roboto;
+  font-size: 30px;
+  color: white;
+  transform: translate(355px,0px);
+}
+/*footer*/
+.t:hover{
+  transform: scale(1.15,1.15);
+}
+.credit{
+  margin-top: 80px;
+  width: 100vw;
+  height: 400px;
+  background-color: inherit;
+}
+.social{
+  text-align: center;
+}
+.info{
+  color: #6F6F6F;
+  font-family:Roboto;
+  font-size: 15px;
+  transform: translate(20%,75px);
+}
+.cop{
+  margin-top: 25px;
+  transform: translate(100px,0px);
+}
