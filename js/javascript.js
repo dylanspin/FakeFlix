@@ -2,21 +2,25 @@
 function page(loc){
   window.location.href = loc+".html";
 }
-
 function check(){
-  var p;
-  for(p=1; p<=7; p++){
-    document.getElementById("links"+p).style.visibility = "hidden";
+  var y = window.scrollY;
+  if(y <= 270){
+    document.getElementById('header').style.background = "none";
   }
-  console.log(document.getElementById('header').offsetHeight);
+  else{
+    document.getElementById('header').style.backgroundColor = "#141414";
+  }
 }
 
 function random(){
-  var i = 0;
-  for(i=1; i<=31; i++){
-    var random = Math.floor(Math.random() * 105+1);
-    document.getElementById(i).innerHTML = "<div class='movie'><img src='pic/m"+random+".jpg' class='film'></div>";
-  }
+  var films = ["","Forrest Gump","Live Die repeat","Hacksaw Ridge","Joker","Ted","King Arthur","LEGEND",
+               "Ted 2","A million ways to die in the wild west","Ready Player one","Why Him","Vacation"
+               ,"We are the Millers","Fury","Mad Max","Advengers End game","Spider man 2","Spider man",
+               "Deadpool","night at the museum","The wolf of wall street","Dunkirk","Martian","Venom",
+               "Ant-man","Grown ups 2","Grown ups 1","War dogs","Pirates of the carabian","Pirates of the carabian"]
+    var random = Math.floor(Math.random() * 30+1);
+    document.getElementById('naam').innerHTML = films[random];
+    document.getElementById('movie').innerHTML = "<img src='pic/m"+random+".jpg' class='film'>";
 }
 
 var af = [0,0,0,0,0,0,0,0];

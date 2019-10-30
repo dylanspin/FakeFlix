@@ -3,7 +3,8 @@ body{
   margin: 0;
   background-color: #141414;
   height: 750px;
-/* overflow-x: hidden; */
+  width: 100vw;
+  overflow-x: hidden;
 }
 html{
   background-color: #141414;
@@ -24,7 +25,7 @@ td{
   height: 30px;
 }
 button.service{
-  font-size: 15px;
+  font-size: 1vw;
   border: 1px solid #6F6F6F;
   padding: 7px;
   background-color: inherit;
@@ -34,6 +35,9 @@ button.service:hover{
   color: white;
   border-radius: 1px solid white;
 }
+button.service:focus{
+    outline: none;
+}
 table.buttons{
   transform: translate(3vw,5%);
 }
@@ -42,10 +46,8 @@ table.icons{
   transform: translate(67vw,-110%);
 }
 table.credit_info{
-  font-size: 1vw;
-}
-table.movies{
-  position: absolute;
+  position: relative;
+  left: 30%;
 }
 input[type="text"]{
   visibility: hidden;
@@ -70,7 +72,6 @@ input[type="text"]:focus{
   background-color: gray;
 }
 @media(max-device-width: 375px) { /*iphone X iphone 5/SE iphone*/
-
   .header_button{
     font-size: 2vh!important;
   }
@@ -78,6 +79,7 @@ input[type="text"]:focus{
     height: 4.5%!important;
   }
   .header_con{
+    /* transform: translate(-50%,0.5vh)!important; */
     transform: translate(0,0.5vh)!important;
   }
   .icons{
@@ -95,18 +97,27 @@ input[type="text"]:focus{
   .vid{
     height: 50vh!important;
   }
+  .social{
+    font-size: 2.5vw!important;
+  }
+  table.credit_info,.cop{
+    display: none;
+  }
+  .featured{
+    height: 22vh!important;
+  }
+  .buttons_{
+    display: none;/*moet nog gefixt worden*/
+  }
+  .naam_film{
+    font-size: 15vw;
+  }
 }
 .content{
   position: absolute;
   top: 545px;
   width: 100%;
   height: 500px;
-}
-.naam{
-  font-family: 'Roboto';
-  color: white;
-  font-size: 1.5vw;
-  transform: translate(6vw,0);
 }
 .vid{
   background-color: #141414;
@@ -116,6 +127,20 @@ input[type="text"]:focus{
   height: 47vw;
   border: none;
 }
+/*films*/
+.lijst{
+  height: 10vh;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 120;
+}
+.films{
+  display: none;
+  width: 800%;
+  position: absolute;
+}
+/*Header*/
 .logo{/*Dylflix logo*/
   color:#E50914;
   font-family: 'BebasNeueRegular';
@@ -131,7 +156,6 @@ input[type="text"]:focus{
   position: absolute;
   border: 1px solid #DCDCDC;
   height: 0vh;
-  border-top: 3px solid #DCDCDC;
   width: 80%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -139,13 +163,14 @@ input[type="text"]:focus{
   top: 120%;
 }
 .header{
-  background-color: #141414;
+  transition: 0.4s;
+  background-color: none;
   width: 100vw;
   height: 4vw;
   position: fixed;
   top: 0;
   right:0;
-  z-index: 1;
+  z-index: 100;
 }
 .header_button{/*Header buttons*/
   margin-left: 15px;
@@ -161,7 +186,6 @@ input[type="text"]:focus{
   transform: scale(1.1,1.1);
 }
 .icon{
-  /*de font-size moet nog gefixt worden*/
   transition: 0.3s;
   color: white;
   margin-left: 20px;
@@ -181,7 +205,7 @@ input[type="text"]:focus{
   width: 40px;
   transform: translate(15px,0);
 }
-.acount_{
+.acount_{ /*uit schuif div voor het acount*/
   padding-right: 40px;
   border: 1px solid #DCDCDC;
   transition: 0.8s;
@@ -200,12 +224,73 @@ input[type="text"]:focus{
   width: 70%;
   font-size: 1.2vw;
   color: white;
-  transform: translate(30%,-10px);
+  transform: translate(40%,-10px);
 }
 .ac:hover{
   text-decoration: underline;
 }
-.movie{
+.fa-2x{
+  font-size: 2vw;
+}
+
+/*Featured*/
+.featured{
+  position: relative;
+  padding: 5vw;
+  height: 80vh;
+}
+.featured_layer{
+  background: linear-gradient(180deg, rgba(20,20,20,0.5) 7%, rgba(31,30,30,0.5) 51%, rgba(20,20,20,0.5) 93%);
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.image_groot{
+  position: absolute;
+  left: 5%;
+  top: 25%;
+  z-index: 20;
+  height: 50%;
+  width: 50%;
+}
+.naam_film{
+  position: absolute;
+  left: 57%;
+  top: 25%;
+  z-index: 30;
+  color: white;
+  font-size: 4vw;
+  font-weight:600;
+  font-family: 'Roboto';
+  text-shadow: rgba(0,0,0,0.5) 0px 3px 3px;
+}
+.buttons_{
+  position: relative;
+  top: 50%;
+  left: 60%;
+  z-index: 20;
+}
+button.play{
+  margin-left: 0.3vw;
+  height: 3vw;
+  width: 10vw;
+  border-radius: 0.3vw;
+  font-family: 'Roboto';
+  color: white;
+  font-size: 1.2vw;
+  border:none;
+  transition: 0.3s;
+  background-color: rgba(40,40,40,0.7)
+}
+button.play:hover{
+  transform: scale(1.05,1.05);
+  color: black;
+  background-color: white;
+}
+.movie{/*image div voor de films*/
   width: 220px;
   height: 130px;
   background-color: white;
@@ -246,22 +331,28 @@ input[type="text"]:focus{
   transform: scale(1.15,1.15);
 }
 .credit{
+  position: absolute;
   margin-top: 50px;
+  left: -5%;
   width: 100vw;
   height: 400px;
   background-color: inherit;
 }
 .social{
+  font-size: 0.9vw;
   text-align: center;
 }
 .info{
+  margin-top: 40px;
+  display: inline-block;
   color: #6F6F6F;
   font-family:'Roboto';
-  font-size: 15px;
-  transform: translate(20%,75px);
+  font-size: 1.1vw;
 }
 .cop{
-  font-size: 0.6vw;
+  font-family: 'Roboto';
+  font-size: 1vw;
+  color: #6F6F6F;
   margin-top: 25px;
-  transform: translate(-4vw,0px);
+  transform: translate(26.5vw,0px);
 }
