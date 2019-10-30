@@ -1,8 +1,12 @@
-html,body{
+body{
   font-family: 'Staatliches'; /*font*/
   margin: 0;
   background-color: #141414;
   height: 750px;
+/* overflow-x: hidden; */
+}
+html{
+  background-color: #141414;
 }
 video{
   object-fit: cover;
@@ -30,74 +34,176 @@ button.service:hover{
   color: white;
   border-radius: 1px solid white;
 }
+table.buttons{
+  transform: translate(3vw,5%);
+}
+table.icons{
+  display: inline-block;
+  transform: translate(67vw,-110%);
+}
+table.credit_info{
+  font-size: 1vw;
+}
+table.movies{
+  position: absolute;
+}
+input[type="text"]{
+  visibility: hidden;
+  padding: 10px;
+  padding-bottom: 2px;
+  font-size: 1vw;
+  border-radius: 10px;
+  border: 1px solid #6F6F6F;
+  color:white;
+  width: 0vw;
+  background-color: inherit;
+  transition: 0.8s;
+  transform: translate(20px,0px);
+}
+input[type="text"]:focus{
+    outline:none;
+}
+.lijn{
+  margin-top: 15px;
+  width: 200%;
+  height: 1px;
+  background-color: gray;
+}
+@media(max-device-width: 375px) { /*iphone X iphone 5/SE iphone*/
+
+  .header_button{
+    font-size: 2vh!important;
+  }
+  .header{
+    height: 4.5%!important;
+  }
+  .header_con{
+    transform: translate(0,0.5vh)!important;
+  }
+  .icons{
+    transform: translate(55vw,-90%)!important;
+    visibility: hidden;
+  }
+  .image{
+    height: 30%!important;
+    width: 30%!important;
+    visibility: visible;
+  }
+  .logo{
+    font-size: 5vw!important;
+  }
+  .vid{
+    height: 50vh!important;
+  }
+}
 .content{
   position: absolute;
   top: 545px;
   width: 100%;
   height: 500px;
 }
-
+.naam{
+  font-family: 'Roboto';
+  color: white;
+  font-size: 1.5vw;
+  transform: translate(6vw,0);
+}
 .vid{
-  position: absolute;
+  background-color: #141414;
+  position: relative;
   margin-top: 0px;
-  width: 100%;
-  height: 800px;
+  width: 100vw;
+  height: 47vw;
   border: none;
 }
 .logo{/*Dylflix logo*/
   color:#E50914;
   font-family: 'BebasNeueRegular';
-  font-size: 3em;
+  font-size: 3vw;
   font-weight: 550;
-  transform: translate(90px,20px);
 }
-.center{/*Center div*/
-  text-align: center;
+.notificatie{
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+  font-family: 'Roboto';
+  visibility: hidden;
+  transition: 0.8s;
+  position: absolute;
+  border: 1px solid #DCDCDC;
+  height: 0vh;
+  border-top: 3px solid #DCDCDC;
+  width: 80%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  left: 0px;
+  top: 120%;
 }
 .header{
   background-color: #141414;
   width: 100vw;
-  height: 70px;
+  height: 4vw;
   position: fixed;
   top: 0;
   right:0;
   z-index: 1;
-}
-.header_con{
-  transform: translate(0px,-10px);
 }
 .header_button{/*Header buttons*/
   margin-left: 15px;
   background-color: inherit;
   color: #DCDCDC;
   border:none;
-  font-size: 20px;
+  font-size: 1vw; /*moet nog aangepast worden voor mobile*/
+  font-family: 'Roboto';
   transition: 0.3s;
 }
 .header_button:hover{
   color: white;
-  transform: scale(1.05,1.05);
-}
-.buttons{
-  transform: translate(240px,-45px);
-}
-.icons{
-  display: inline-block;
-  transform: translate(635px,0px);
+  transform: scale(1.1,1.1);
 }
 .icon{
+  /*de font-size moet nog gefixt worden*/
   transition: 0.3s;
   color: white;
-  font-size: -10px;
   margin-left: 20px;
 }
 .search_bar{/*search bar voor de search icon*/
+  text-align: right;
+  width: 12vw;
   display: inline-block;
 }
-.image{
+.image{/*profile pic*/
+  height: 2.5vw;
+  width: 2.5vw;
+  transform: translate(35px,0);
+}
+.profiles{
   height: 40px;
   width: 40px;
-  transform: translate(35px,10px);
+  transform: translate(15px,0);
+}
+.acount_{
+  padding-right: 40px;
+  border: 1px solid #DCDCDC;
+  transition: 0.8s;
+  visibility: hidden;
+  position: absolute;
+  font-family: 'Roboto';
+  background-color: rgba(0,0,0,0.8);
+  height: 0vh;
+  width: 10vw;
+  top: 120%;
+  overflow:hidden;
+}
+.ac{
+  text-align: left;
+  display: inline-block;
+  width: 70%;
+  font-size: 1.2vw;
+  color: white;
+  transform: translate(30%,-10px);
+}
+.ac:hover{
+  text-decoration: underline;
 }
 .movie{
   width: 220px;
@@ -111,60 +217,36 @@ button.service:hover{
 .movie:hover{
   transform: scale(1.35,1.35);
 }
-.movies{
-  width: 400vw;
-  display: block;
-  margin-left: -290px;
-  margin-top: 35px;
-}
 .film{
-  width: 220px;
-  height: 130px;
+  width: 100%;
+  height: 100%;
 }
-.links{
-  opacity: 0.2;
-  background-color: black;
+.stuk{
+  height: 75px;
+  width: 100%;
+}
+.nog{
+  display: inline-block;
   position: absolute;
-  padding-top: 40px;
-  padding-left: 65px;
-  width: 80px;
-  height: 92px;
-  color: white;
-  transform: translate(-2868px,-136px);
-}
-.links:hover{
-  opacity: 0.7;
-}
-.rechts{
-  opacity: 0.2;
-  background-color: black;
-  position: absolute;
-  padding-top: 40px;
-  padding-left: -65px;
+  left: 20px;
+  height: 75px;
   width: 100px;
-  height: 92px;
-  color: white;
-  transform: translate(-1360px,-136px);
 }
-.rechts:hover{
-  opacity: 0.7;
+.text{
+  font-size: 1.2vw;
+  width: 300px;
+  float: left;
+  position: relative;
+  left: 45px;
+  top: 10px;
 }
 
-.naam{
-  width: 200px;
-  text-align: left;
-  font-weight: 400;
-  font-family:Roboto;
-  font-size: 30px;
-  color: white;
-  transform: translate(355px,0px);
-}
 /*footer*/
 .t:hover{
   transform: scale(1.15,1.15);
 }
 .credit{
-  margin-top: 80px;
+  margin-top: 50px;
   width: 100vw;
   height: 400px;
   background-color: inherit;
@@ -174,11 +256,12 @@ button.service:hover{
 }
 .info{
   color: #6F6F6F;
-  font-family:Roboto;
+  font-family:'Roboto';
   font-size: 15px;
   transform: translate(20%,75px);
 }
 .cop{
+  font-size: 0.6vw;
   margin-top: 25px;
-  transform: translate(100px,0px);
+  transform: translate(-4vw,0px);
 }

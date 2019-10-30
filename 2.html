@@ -3,35 +3,147 @@
   <head>
     <meta charset="utf-8">
     <title>Dylflix</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="shortcut icon"type="image/png" href="pic/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/pagina.css">
     <script src="js/javascript.js"></script>
   </head>
   <body>
-    <div class="logo">
-      Dylflix
+    <div class="header" id="header">
+      <div class="header_con">
+        <table class= "buttons">
+          <th>
+            <div class="logo">
+                Dylflix
+            </div>
+          </th>
+          <th><button class="header_button">Home</button></th>
+          <th><button class="header_button">Latest</button></th>
+          <th><button class="header_button">Series</button></th>
+          <th><button class="header_button">Mylist</button></th>
+        </table>
+        <table class="icons">
+          <th>
+            <div class="search_bar">
+              <input type="text" name="search" id="search" placeholder="Search..." autocomplete="off"></input>
+            </div>
+          </th>
+          <th><i class="fa fa-search icon fa-2x" onclick="schuif(0,10)"></i></th>
+          <th>
+            <i class="fa fa-bell icon fa-2x" onclick="schuif(1,50)"></i>
+            <div class="notificatie" id="notificatie"><!--De uitschuif van de bell-->
+              <div class="stuk">
+                <img src="pic/m4.jpg" class="nog">
+                <div class="text">Joker</div>
+              </div>
+              <hr>
+              <div class="stuk">
+                <img src="pic/m86.jpg" class="nog">
+                <div class="text">IT II</div>
+              </div>
+              <hr>
+              <div class="stuk">
+                <img src="pic/m107.jpg" class="nog">
+                <div class="text">Lion King</div>
+              </div>
+              <hr>
+              <div class="stuk">
+                <img src="pic/m108.jpg" class="nog">
+                <div class="text">once upon a time</div>
+              </div>
+              <hr>
+              <div class="stuk">
+                <img src="pic/m69.jpg" class="nog">
+                <div class="text">Jhon wick 3</div>
+              </div>
+              <hr>
+              <div class="stuk">
+                <img src="pic/m42.jpg" class="nog">
+                <div class="text">Hansel and Gretal</div>
+              </div>
+              <hr>
+              <div class="stuk">
+                <img src="pic/s1.jpg" class="nog">
+                <div class="text">Nieuw seizoen</div>
+              </div>
+              <hr>
+              <div class="stuk">
+                <img src="pic/m110.jpg" class="nog">
+                <div class="text">Jumanji II</div>
+              </div><br>
+            </div>
+          </th>
+          <th>
+            <img src="pic/prof1.png" class="image" onclick="schuif(2,40)">
+            <div class="acount_" id="acount"><br>
+              <img src="pic/prof1.png" class="profiles"> <div class="ac">Dylan Spin</div><br>
+              <img src="pic/prof2.png" class="profiles"> <div class="ac">Bono Spin</div><br>
+              <img src="pic/prof3.png" class="profiles"> <div class="ac">Levi/Luna</div><br>
+              <br>
+              <div class="ac">Manage</div>
+              <div class="lijn"></div><br>
+              <div class="ac">Acount</div><br>
+              <div class="ac">Help</div><br>
+              <div class="ac">Sign out</div><br>
+
+            </div>
+          </th>
+          <th><i class="fa fa-caret-down icon fa-1x"></i></th>
+        </table>
+      </div>
     </div>
 
-    <div class="center">
-      <div class="kop">Acounts</div>
+    <video class="vid" autoplay muted loop>
+      <source src="pic/joker.mov#t=9" id="trailer"/>
+    </video>
 
-      <div class="user" onclick="page(1)">
-        <img src="pic/prof1.png" class="image">
-        Dylan
+
+
+    <!-- <div class="credit">
+      <div class="social">
+        <i class="fa fa-twitter icon  t fa-3x"></i>
+        <i class="fa fa-facebook-official t icon fa-3x"></i>
+        <i class="fa fa-instagram icon t fa-3x"></i>
+        <i class="fa fa-youtube-play icon t fa-3x"></i>
+        <i class="fa fa-bell icon t fa-3x"></i>
+        <i class="fa fa-twitter-square icon t fa-3x"></i>
+        <i class="fa fa-facebook icon t fa-3x"></i>
       </div>
-      <div class="user" onclick="page(2)">
-        <img src="pic/prof2.png" class="image">
-        Bono
+      <div class="info">
+          <table class="credit_info">
+            <tr>
+              <td><a href="">Audio and Subtitles</a></td>
+              <td><a href="">Audio Description</a></td>
+              <td><a href="">Help Centre</a></td>
+              <td><a href="">Gift Cards</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Media Centre</a></td>
+              <td><a href="">Investor Relations</a></td>
+              <td><a href="">Jobs</a></td>
+              <td><a href="">Terms of Use</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Privacy</a></td>
+              <td><a href="">Legal Notices</a></td>
+              <td><a href="">Cookie Preferences</a></td>
+              <td><a href="">Corporate Information</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Contact Us</a></td>
+            </tr>
+          </table>
+
+          <div class="cop">
+            <button class="service">Service Code</button><br><br>
+            <span>1940-2019 Dylflix, inc</span>
+          </div>
       </div>
-      <div class="user" onclick="page(3)">
-        <img src="pic/prof3.png" class="image">
-        Levi/luna
-      </div><br>
-
-      <button class="manage">Manage profiles</button>
-    </div>
-
+    </div> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
