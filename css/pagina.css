@@ -70,6 +70,18 @@ input[type="text"]{
 input[type="text"]:focus{
     outline:none;
 }
+.mylist_{
+  position: absolute;
+  transform: translate(3vw,40vh);
+}
+.my{
+  position: absolute;
+  transform: translate(4vw,20vh);
+  font-size: 3vw;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: white;
+}
 .lijn{
   margin-top: 10px;
   width: 200%;
@@ -249,6 +261,7 @@ input[type="text"]:focus{
 
 /*Featured*/
 .featured{
+  margin-top: 30vh;
   position: relative;
   padding: 5vw;
   height: 80vh;

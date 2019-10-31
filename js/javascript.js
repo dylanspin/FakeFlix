@@ -2,7 +2,9 @@
 function page(loc){
   if(loc == 10){
     window.location.href = "mylist.html";
-    console.log("tien");
+  }
+  else if (loc == 9) {
+    window.location.href = "index.html";
   }
   else{
     console.log("test");
@@ -20,6 +22,10 @@ function check(){
   }
 }
 
+function background(){
+  document.getElementById('header').style.backgroundColor = "#141414";
+}
+
 function profiel(){
   var path = window.location.pathname;
   var page = path.split("/").pop().replace('.html','');
@@ -33,7 +39,7 @@ function random(){
                "Deadpool","night at the museum","The wolf of wall street","Dunkirk","Martian","Venom",
                "Ant-man","Grown ups 2","Grown ups 1","War dogs","Pirates of the carabian","Pirates of the carabian",
                 "Jhony English 2","Jhony English","22 Jump Street","23 Jump Street","Baby driver","Green book","Inglorius bastards",
-               "Transcendence","Burnt","White boy Ricky","Unbroken","Hansel and Gretal","U.N.C.L.E","Non-Stop","Idiocrecy","Click",
+               "Transcenden","Burnt","White boy Ricky","Unbroken","Hansel and Gretal","U.N.C.L.E","Non-Stop","Idiocrecy","Click",
                 ]
     var random = Math.floor(Math.random() * 46+1);
     document.getElementById('naam').innerHTML = films[random];
@@ -44,8 +50,9 @@ var checktrue = [true,true,true];
 var divs = ["search","notificatie","acount"]
 
 function schuif(t,breed){
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { //checkt all mobile moet nog aangepast worden
-    breed -= 30;
+  ///Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+  if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) { //checkt all mobile moet nog aangepast worden
+    breed -= 12;
   }
   var div = document.getElementById(divs[t]);
   if(checktrue[t]){

@@ -1,4 +1,12 @@
+
 @media(max-device-width: 375px) { /*iphone X iphone 5/SE iphone*/
+
+  .mylist_{
+    transform: translate(10vw,20vh);
+  }
+  .my{
+    transform: translate(12vw,15vh);
+  }
   .header_button{
     font-size: 2vh!important;
   }
@@ -32,12 +40,20 @@
     display: none;
   }
   .featured{
-    margin-top: 5%!important; /*moet nog veranderd worden voor iphone de 5 6 !!!!!!!*/
+    margin-top: 22vh; /*moet nog veranderd worden voor iphone de 5 6 !!!!!!!*/
     margin-bottom: 3vw;
     height: 22vh!important;
   }
+  .acount_{
+    width: 30vw!important;
+    left: 5vw!important;
+  }
+  .naam,.ac{
+    font-size: 3vw!important;
+  }
   .buttons_{
-    display: none;/*moet nog gefixt worden*/
+    top: 70%;
+    position: absolute;
   }
   .naam_film{
     font-size: 15vw;
@@ -53,10 +69,10 @@
     left:84%!important;
     top: 2vh!important;
   }
-  .carousel-control-pref{
-    font-size: 3vw;
-    left:90%;
-    top: 5vw!important;
+  .carousel-control-prev{
+    width: 2vw;
+    left:-6.5%!important;
+    top: 4vw!important;
   }
   .movie{
     width: 27vw!important;
@@ -80,3 +96,105 @@
     font-size: 7vw;
   }
 }
+@media only screen /*iphone X*/
+    and (device-width : 375px)
+    and (device-height : 812px)
+    and (-webkit-device-pixel-ratio : 3) {
+
+      .featured{
+        margin-top: 12vh;
+      }
+      .mylist_{
+        transform: translate(13vw,15vh);
+      }
+      .my{
+        transform: translate(15vw,10vh);
+      }
+
+    }
+
+@media only screen /*Ipad*/
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)  {
+    .header_button{
+      font-size: 2vh!important;
+    }
+    .header{
+      height: 7.5%!important;
+    }
+    .header_con{
+      transform: translate(0,1.2vh)!important;
+    }
+    .icons{
+      transform: translate(55vw,-90%)!important;
+      visibility: hidden;
+    }
+    .image{
+      height: 30%!important;
+      width: 30%!important;
+      visibility: visible;
+    }
+    .logo{
+      font-size: 5vw!important;
+    }
+    .vid{
+      height: 50vh!important;
+    }
+    table.credit_info,.cop{
+      display: none;
+    }
+    .featured{
+      margin-top: 32vh; /*moet nog veranderd worden voor iphone de 5 6 !!!!!!!*/
+      margin-bottom: 3vw;
+      height: 32vh!important;
+    }
+    .acount_{
+      width: 30vw!important;
+      left: 5vw!important;
+    }
+    .naam,.ac{
+      font-size: 3vw!important;
+    }
+    .buttons_{
+      position: absolute;
+    }
+    .naam_film{
+      font-size: 15vw;
+    }
+    .carousel{
+      margin-top: -7vh;
+      text-align: center;
+    }
+    .carousel-control-next{
+      width: 2vw;
+      left:87%!important;
+      top: 2vh!important;
+    }
+    .carousel-control-prev{
+      width: 2vw;
+      left:-9%!important;
+      top: 4vw!important;
+    }
+    .movie{
+      width: 15vw!important;
+      height: 12vw!important;
+    }
+    .carousel-item{
+      left: 0vw!important;
+      height: 26vw!important;
+      padding-top: 6vw!important;
+    }
+    .content{
+      height: 23vh!important;
+      top: -17.5vw!important;
+    }
+    .tag{
+      left: -40vw!important;
+      top: 5vw!important;
+      font-size: 2.5vw!important;
+    }
+    .naam_film{
+      font-size: 7vw;
+    }
+
+  }

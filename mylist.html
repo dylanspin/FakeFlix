@@ -12,7 +12,7 @@
     <link rel="shortcut icon"type="image/png" href="pic/logo.png">
     <script src="js/javascript.js"></script>
   </head>
-  <body onscroll="check()" onload="mylist()">
+  <body onload="background()">
 
     <!--HEADER-->
     <div class="header" id="header">
@@ -23,7 +23,7 @@
                 Dylflix
             </div>
           </th>
-          <th><button class="header_button">Home</button></th>
+          <th><button class="header_button"onclick="page(9)">Home</button></th>
           <th><button class="header_button">Latest</button></th>
           <th><button class="header_button">Series</button></th>
           <th><button class="header_button" onclick="page(10)">Mylist</button></th>
@@ -103,47 +103,94 @@
     </div>
 
     <!--FILMS-->
-
-    <!--FOOTER-->
-    <div class="credit">
-      <div class="social">
-        <i class="fa fa-twitter icon  t fa-3x"></i>
-        <i class="fa fa-facebook-official t icon fa-3x"></i>
-        <i class="fa fa-instagram icon t fa-3x"></i>
-        <i class="fa fa-youtube-play icon t fa-3x"></i>
-        <i class="fa fa-bell icon t fa-3x"></i>
-        <i class="fa fa-twitter-square icon t fa-3x"></i>
-        <i class="fa fa-facebook icon t fa-3x"></i>
-      </div>
-      <div class="info">
-        <table class="credit_info">
-          <tr>
-            <td><a href="">Audio and Subtitles</a></td>
-            <td><a href="">Audio Description</a></td>
-            <td><a href="">Help Centre</a></td>
-            <td><a href="">Gift Cards</a></td>
-          </tr>
-          <tr>
-            <td><a href="">Media Centre</a></td>
-            <td><a href="">Investor Relations</a></td>
-            <td><a href="">Jobs</a></td>
-            <td><a href="">Terms of Use</a></td>
-          </tr>
-          <tr>
-            <td><a href="">Privacy</a></td>
-            <td><a href="">Legal Notices</a></td>
-            <td><a href="">Cookie Preferences</a></td>
-            <td><a href="">Corporate Information</a></td>
-          </tr>
-          <tr>
-            <td><a href="">Contact Us</a></td>
-          </tr>
-        </table>
-      </div>
-      <div class="cop">
-        <button class="service">Service Code</button><br><br>
-        <span>1940-2019 Dylflix, inc</span>
-      </div>
+    <div class="my">My List</div>
+    <div class="mylist_">
+      <table>
+        <td class="mys">
+          <tr><div class="movie"><img src="pic/m1.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m2.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m3.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m4.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m5.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m6.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m7.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m8.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m9.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m10.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m11.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m12.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m13.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m14.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m15.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m16.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m17.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m18.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m19.jpg" class="film"></div></tr>
+        </td>
+        <td class="mys">
+          <tr><div class="movie"><img src="pic/m20.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m21.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m22.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m23.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m24.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m25.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m26.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m27.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m28.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m29.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m30.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m0.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m31.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m32.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m33.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m34.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m35.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m36.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m37.jpg" class="film"></div></tr>
+        </td>
+        <td class="mys">
+          <tr><div class="movie"><img src="pic/m38.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m39.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m40.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m41.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m42.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m43.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m44.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m45.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m46.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m79.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m48.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m49.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m50.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m51.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m52.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m53.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m54.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m75.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m55.jpg" class="film"></div></tr>
+        </td>
+        <td class="mys">
+          <tr><div class="movie"><img src="pic/m56.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m57.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m58.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m59.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m60.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m61.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m62.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m63.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m64.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m65.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m66.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m67.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m68.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m69.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m70.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m71.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m72.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m73.jpg" class="film"></div></tr>
+          <tr><div class="movie"><img src="pic/m77.jpg" class="film"></div></tr>
+        </td>
+      </table>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
