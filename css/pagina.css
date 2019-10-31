@@ -24,6 +24,9 @@ a:hover{
 td{
   height: 30px;
 }
+a:hover{
+  color: inherit;
+}
 button.service{
   font-size: 1vw;
   border: 1px solid #6F6F6F;
@@ -42,6 +45,7 @@ table.buttons{
   transform: translate(3vw,5%);
 }
 table.icons{
+  font-size: 1vw;
   display: inline-block;
   transform: translate(67vw,-110%);
 }
@@ -50,6 +54,7 @@ table.credit_info{
   left: 30%;
 }
 input[type="text"]{
+  font-family: 'Roboto';
   visibility: hidden;
   padding: 10px;
   padding-bottom: 2px;
@@ -66,58 +71,16 @@ input[type="text"]:focus{
     outline:none;
 }
 .lijn{
-  margin-top: 15px;
+  margin-top: 10px;
   width: 200%;
   height: 1px;
   background-color: gray;
 }
-@media(max-device-width: 375px) { /*iphone X iphone 5/SE iphone*/
-  .header_button{
-    font-size: 2vh!important;
-  }
-  .header{
-    height: 4.5%!important;
-  }
-  .header_con{
-    /* transform: translate(-50%,0.5vh)!important; */
-    transform: translate(0,0.5vh)!important;
-  }
-  .icons{
-    transform: translate(55vw,-90%)!important;
-    visibility: hidden;
-  }
-  .image{
-    height: 30%!important;
-    width: 30%!important;
-    visibility: visible;
-  }
-  .logo{
-    font-size: 5vw!important;
-  }
-  .vid{
-    height: 50vh!important;
-  }
-  .social{
-    font-size: 2.5vw!important;
-  }
-  table.credit_info,.cop{
-    display: none;
-  }
-  .featured{
-    height: 22vh!important;
-  }
-  .buttons_{
-    display: none;/*moet nog gefixt worden*/
-  }
-  .naam_film{
-    font-size: 15vw;
-  }
-}
 .content{
-  position: absolute;
-  top: 545px;
+  position: relative;
+  height: 60vh;
+  top: -13vw;
   width: 100%;
-  height: 500px;
 }
 .vid{
   background-color: #141414;
@@ -128,18 +91,52 @@ input[type="text"]:focus{
   border: none;
 }
 /*films*/
-.lijst{
-  height: 10vh;
+.carousel{
+  margin-top: -4vh;
+}
+.carousel-item{
   position: relative;
-  left: 0;
+  left: 2.5vw;
   top: 0;
-  z-index: 120;
+  padding-top: 3vw;
+  height: 13vw;
 }
-.films{
-  display: none;
-  width: 800%;
+.carousel-control-prev{
   position: absolute;
+  left: -12.8vw;
+  top: 6vh;
 }
+.carousel-control-next{
+  position: absolute;
+  left: 83.5vw;/*moet nog veranderd worden voor de responsive*/
+  top: 6vh;
+}
+.movie{/*image div voor de films*/
+  width: 15vw;
+  height: 8vw;
+  background-color: white;
+  background-color: inherit;
+  display: inline-block;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+.movie:hover{
+  transform: scale(1.35,1.35);
+}
+.film{/*de image*/
+  width: 100%;
+  height: 100%;
+}
+.tag{
+  color: white;
+  font-family: 'Roboto';
+  position: relative;
+  left: 3vw;
+  top: 2vw;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
 /*Header*/
 .logo{/*Dylflix logo*/
   color:#E50914;
@@ -148,6 +145,7 @@ input[type="text"]:focus{
   font-weight: 550;
 }
 .notificatie{
+  padding-top: 5%;
   color: white;
   background-color: rgba(0,0,0,0.8);
   font-family: 'Roboto';
@@ -198,11 +196,11 @@ input[type="text"]:focus{
 .image{/*profile pic*/
   height: 2.5vw;
   width: 2.5vw;
-  transform: translate(35px,0);
+  transform: translate(35px,10%);
 }
 .profiles{
-  height: 40px;
-  width: 40px;
+  height: 30%;
+  width: 30%;
   transform: translate(15px,0);
 }
 .acount_{ /*uit schuif div voor het acount*/
@@ -219,14 +217,30 @@ input[type="text"]:focus{
   overflow:hidden;
 }
 .ac{
+  position: relative;
   text-align: left;
   display: inline-block;
   width: 70%;
   font-size: 1.2vw;
   color: white;
-  transform: translate(40%,-10px);
+  left: 40%;
 }
 .ac:hover{
+  text-decoration: underline;
+}
+.een{
+  position: relative;
+  width: 100%;
+}
+.naam{
+  position: relative;
+  left: 50%;
+  top: -8%;
+  color: white;
+  font-family: 'Roboto';
+}
+.naam:hover{
+  cursor: context-menu;
   text-decoration: underline;
 }
 .fa-2x{
@@ -290,22 +304,6 @@ button.play:hover{
   color: black;
   background-color: white;
 }
-.movie{/*image div voor de films*/
-  width: 220px;
-  height: 130px;
-  background-color: white;
-  background-color: inherit;
-  display: inline-block;
-  margin-left: 5px;
-  transition: 0.3s;
-}
-.movie:hover{
-  transform: scale(1.35,1.35);
-}
-.film{
-  width: 100%;
-  height: 100%;
-}
 .stuk{
   height: 75px;
   width: 100%;
@@ -322,7 +320,7 @@ button.play:hover{
   width: 300px;
   float: left;
   position: relative;
-  left: 45px;
+  left: 50%;
   top: 10px;
 }
 
@@ -332,8 +330,9 @@ button.play:hover{
 }
 .credit{
   position: absolute;
-  margin-top: 50px;
-  left: -5%;
+  margin-top: 2vh;
+  left: 50%;
+  transform: translate(-50%);
   width: 100vw;
   height: 400px;
   background-color: inherit;

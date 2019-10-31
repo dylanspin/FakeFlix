@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dylflix</title>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/pagina.css">
+    <link rel="stylesheet" href="css/iphone.css">
+    <link rel="shortcut icon"type="image/png" href="pic/logo.png">
+    <script src="js/javascript.js"></script>
+  </head>
+  <body onscroll="check()" onload="mylist()">
+
+    <!--HEADER-->
+    <div class="header" id="header">
+      <div class="header_con">
+        <table class= "buttons">
+          <th>
+            <div class="logo">
+                Dylflix
+            </div>
+          </th>
+          <th><button class="header_button">Home</button></th>
+          <th><button class="header_button">Latest</button></th>
+          <th><button class="header_button">Series</button></th>
+          <th><button class="header_button" onclick="page(10)">Mylist</button></th>
+        </table>
+        <table class="icons">
+          <th>
+            <div class="search_bar">
+              <input type="text" name="search" id="search" placeholder="Search..." autocomplete="off"></input>
+            </div>
+          </th>
+          <th><i class="fa fa-search icon fa-2x" onclick="schuif(0,10)"></i></th>
+          <th>
+            <i class="fa fa-bell icon fa-2x" onclick="schuif(1,50)"></i>
+            <div class="notificatie" id="notificatie"><!--De uitschuif van de bell-->
+              <div class="stuk">
+                <img src="pic/m4.jpg" class="nog">
+                <div class="text">Joker</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m86.jpg" class="nog">
+                <div class="text">IT II</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m107.jpg" class="nog">
+                <div class="text">Lion King</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m108.jpg" class="nog">
+                <div class="text">once upon a time</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m69.jpg" class="nog">
+                <div class="text">Jhon wick 3</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m42.jpg" class="nog">
+                <div class="text">Hansel and Gretal</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/s1.jpg" class="nog">
+                <div class="text">Nieuw seizoen</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m110.jpg" class="nog">
+                <div class="text">Jumanji II</div>
+              </div><br>
+            </div>
+          </th>
+          <th>
+            <img src="pic/prof1.png" class="image" onclick="schuif(2,46)">
+            <div class="acount_" id="acount"><br>
+              <div class="een"  onclick="page(1)">
+                <img src="pic/prof1.png" class="profiles">
+              </div><div class="naam"onclick="page(1)">Dylan Spin</div>
+              <div class="een"  onclick="page(2)">
+                <img src="pic/prof2.png" class="profiles">
+              </div><div class="naam"onclick="page(1)">Bono Spin</div>
+              <div class="een"  onclick="page(3)">
+                <img src="pic/prof3.png" class="profiles">
+              </div><div class="naam"onclick="page(1)">Levi/Luna</div>
+              <div class="ac">Manage</div>
+              <div class="lijn"></div><br>
+              <div class="ac">Acount</div><br>
+              <div class="ac">Help</div><br>
+              <div class="ac">Sign out</div><br>
+            </div>
+          </th>
+        </table>
+      </div>
+    </div>
+
+    <!--FILMS-->
+
+    <!--FOOTER-->
+    <div class="credit">
+      <div class="social">
+        <i class="fa fa-twitter icon  t fa-3x"></i>
+        <i class="fa fa-facebook-official t icon fa-3x"></i>
+        <i class="fa fa-instagram icon t fa-3x"></i>
+        <i class="fa fa-youtube-play icon t fa-3x"></i>
+        <i class="fa fa-bell icon t fa-3x"></i>
+        <i class="fa fa-twitter-square icon t fa-3x"></i>
+        <i class="fa fa-facebook icon t fa-3x"></i>
+      </div>
+      <div class="info">
+        <table class="credit_info">
+          <tr>
+            <td><a href="">Audio and Subtitles</a></td>
+            <td><a href="">Audio Description</a></td>
+            <td><a href="">Help Centre</a></td>
+            <td><a href="">Gift Cards</a></td>
+          </tr>
+          <tr>
+            <td><a href="">Media Centre</a></td>
+            <td><a href="">Investor Relations</a></td>
+            <td><a href="">Jobs</a></td>
+            <td><a href="">Terms of Use</a></td>
+          </tr>
+          <tr>
+            <td><a href="">Privacy</a></td>
+            <td><a href="">Legal Notices</a></td>
+            <td><a href="">Cookie Preferences</a></td>
+            <td><a href="">Corporate Information</a></td>
+          </tr>
+          <tr>
+            <td><a href="">Contact Us</a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="cop">
+        <button class="service">Service Code</button><br><br>
+        <span>1940-2019 Dylflix, inc</span>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

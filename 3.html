@@ -3,35 +3,641 @@
   <head>
     <meta charset="utf-8">
     <title>Dylflix</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/pagina.css">
+    <link rel="stylesheet" href="css/iphone.css">
     <link rel="shortcut icon"type="image/png" href="pic/logo.png">
     <script src="js/javascript.js"></script>
   </head>
-  <body>
-    <div class="logo">
-      Dylflix
+  <body onscroll="check()" onload="random(),profiel()">
+
+    <!--HEADER-->
+    <div class="header" id="header">
+      <div class="header_con">
+        <table class= "buttons">
+          <th>
+            <div class="logo">
+                Dylflix
+            </div>
+          </th>
+          <th><button class="header_button">Home</button></th>
+          <th><button class="header_button">Latest</button></th>
+          <th><button class="header_button">Series</button></th>
+          <th><button class="header_button" onclick="page(10)">Mylist</button></th>
+        </table>
+        <table class="icons">
+          <th>
+            <div class="search_bar">
+              <input type="text" name="search" id="search" placeholder="Search..." autocomplete="off"></input>
+            </div>
+          </th>
+          <th><i class="fa fa-search icon fa-2x" onclick="schuif(0,10)"></i></th>
+          <th>
+            <i class="fa fa-bell icon fa-2x" onclick="schuif(1,50)"></i>
+            <div class="notificatie" id="notificatie"><!--De uitschuif van de bell-->
+              <div class="stuk">
+                <img src="pic/m4.jpg" class="nog">
+                <div class="text">Joker</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m86.jpg" class="nog">
+                <div class="text">IT II</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m107.jpg" class="nog">
+                <div class="text">Lion King</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m108.jpg" class="nog">
+                <div class="text">once upon a time</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m69.jpg" class="nog">
+                <div class="text">Jhon wick 3</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m42.jpg" class="nog">
+                <div class="text">Hansel and Gretal</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/s1.jpg" class="nog">
+                <div class="text">Nieuw seizoen</div>
+              </div>
+              <div class="lijn"></div><br>
+              <div class="stuk">
+                <img src="pic/m110.jpg" class="nog">
+                <div class="text">Jumanji II</div>
+              </div><br>
+            </div>
+          </th>
+          <th>
+            <p id="profile"></p>
+            <div class="acount_" id="acount"><br>
+              <div class="een"  onclick="page(1)">
+                <img src="pic/prof1.png" class="profiles">
+              </div><div class="naam"onclick="page(1)">Dylan Spin</div>
+              <div class="een"  onclick="page(2)">
+                <img src="pic/prof2.png" class="profiles">
+              </div><div class="naam"onclick="page(2)">Bono Spin</div>
+              <div class="een"  onclick="page(3)">
+                <img src="pic/prof3.png" class="profiles">
+              </div><div class="naam"onclick="page(3)">Levi/Luna</div>
+              <div class="ac">Manage</div>
+              <div class="lijn"></div><br>
+              <div class="ac">Acount</div><br>
+              <div class="ac">Help</div><br>
+              <div class="ac">Sign out</div><br>
+
+            </div>
+          </th>
+        </table>
+      </div>
     </div>
 
-    <div class="center">
-      <div class="kop">Acounts</div>
+    <!--VIDEO-->
+    <video class="vid" autoplay muted loop>
+      <source src="pic/joker.mov#t=9" id="trailer"/>
+    </video>
 
-      <div class="user" onclick="page(1)">
-        <img src="pic/prof1.png" class="image">
-        Dylan
+    <!--FILMS-->
+  <div class="content">
+    <div id="carouselExampleControls1" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+        <div class="tag">My list</div>
+        <div class="carousel-item active">
+          <div class="movie"><img src="pic/m17.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m27.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m12.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m10.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m20.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m31.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m54.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m46.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m69.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m72.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m64.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m107.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m92.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m114.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m89.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m94.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m49.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m84.jpg" class="film"></div>
+          </span>
+        </div>
       </div>
-      <div class="user" onclick="page(2)">
-        <img src="pic/prof2.png" class="image">
-        Bono
-      </div>
-      <div class="user" onclick="page(3)">
-        <img src="pic/prof3.png" class="image">
-        Levi/luna
-      </div><br>
-
-      <button class="manage">Manage profiles</button>
+      <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
+    <div id="carouselExampleControls10" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+        <div class="tag">Watch again</div>
+        <div class="carousel-item active">
+          <div class="movie"><img src="pic/m54.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m51.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m46.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m31.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m18.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m11.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m23.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m27.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m26.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m49.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m70.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m65.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m93.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m94.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m114.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m92.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m72.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m130.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m107.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m118.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m120.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m129.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m131.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m132.jpg" class="film"></div>
+          </span>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls10" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls10" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+
+    <div id="carouselExampleControls2" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+        <div class="tag">Comedy</div>
+        <div class="carousel-item active">
+          <div class="movie"><img src="pic/m5.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m12.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m9.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m17.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m21.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m19.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m8.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m18.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m26.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m28.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m30.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m37.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m27.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m29.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m34.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m35.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m49.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m60.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m116.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m113.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m91.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m73.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m65.jpg" class="film"></div>
+          </span>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div id="carouselExampleControls3" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+        <div class="tag">Action</div>
+        <div class="carousel-item active">
+          <div class="movie"><img src="pic/m2.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m6.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m3.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m63.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m4.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m69.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m73.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m70.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m68.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m67.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m75.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m88.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m103.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m95.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m85.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m79.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m90.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m48.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m89.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m99.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m113.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m96.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m98.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m62.jpg" class="film"></div>
+          </span>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <!--FEATURED-->
+  <div class="featured" style="background-image:url('pic/movies.jpg');">
+    <div class="featured_layer"></div>
+    <div class="image_groot" id="movie">
+
+    </div>
+    <div class="naam_film">
+        <p id="naam"></p>
+    </div>
+    <div class="buttons_">
+      <button class="play"><i class="fa fa-play"></i> Play</button>
+      <button class="play"><i class="fa fa-plus"></i> My List</button>
+      <button class="play"><i class="fa fa-info-circle"></i> More Info</button>
+    </div>
+  </div><br>
+
+  <!--Films-->
+    <div id="carouselExampleControls4" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+        <div class="tag">History</div>
+        <div class="carousel-item active">
+          <div class="movie"><img src="pic/m3.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m14.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m7.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m9.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m22.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m36.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m41.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m40.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m57.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m55.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m43.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m49.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m81.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m82.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m102.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m104.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m105.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m111.jpg" class="film"></div>
+          </span>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div id="carouselExampleControls5" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+        <div class="tag">New Releases</div>
+        <div class="carousel-item active">
+          <div class="movie"><img src="pic/m4.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m17.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m36.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m51.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m54.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m58.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m73.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m60.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m69.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m72.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m86.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m88.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m107.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m108.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m93.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m16.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m0.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m112.jpg" class="film"></div>
+          </span>
+        </div>
+        <div class="carousel-item">
+          <div class="movie"><img src="pic/m109.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m114.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m115.jpg" class="film"></div>
+          <span class="iphone">
+            <div class="movie"><img src="pic/m116.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m117.jpg" class="film"></div>
+            <div class="movie"><img src="pic/m118.jpg" class="film"></div>
+          </span>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls5" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls5" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div id="carouselExampleControls6" class="carousel slide" data-interval="false">
+    <div class="carousel-inner">
+      <div class="tag">Music Theme</div>
+      <div class="carousel-item active">
+        <div class="movie"><img src="pic/m36.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m58.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m71.jpg" class="film"></div>
+        <span class="iphone">
+          <div class="movie"><img src="pic/m109.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m35.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m117.jpg" class="film"></div>
+        </span>
+      </div>
+      <div class="carousel-item">
+        <div class="movie"><img src="pic/m120.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        <span class="iphone">
+          <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        </span>
+      </div>
+      <div class="carousel-item">
+        <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        <span class="iphone">
+          <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        </span>
+      </div>
+      <div class="carousel-item">
+        <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        <span class="iphone">
+          <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+          <div class="movie"><img src="pic/m119.jpg" class="film"></div>
+        </span>
+      </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls6" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls6" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div id="carouselExampleControls7" class="carousel slide" data-interval="false">
+  <div class="carousel-inner">
+    <div class="tag">Based on real life</div>
+    <div class="carousel-item active">
+      <div class="movie"><img src="pic/m124.jpg" class="film"></div>
+      <div class="movie"><img src="pic/m120.jpg" class="film"></div>
+      <div class="movie"><img src="pic/m3.jpg" class="film"></div>
+      <span class="iphone">
+        <div class="movie"><img src="pic/m7.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m22.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m28.jpg" class="film"></div>
+      </span>
+    </div>
+    <div class="carousel-item">
+      <div class="movie"><img src="pic/m36.jpg" class="film"></div>
+      <div class="movie"><img src="pic/m40.jpg" class="film"></div>
+      <div class="movie"><img src="pic/m41.jpg" class="film"></div>
+      <span class="iphone">
+        <div class="movie"><img src="pic/m52.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m57.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m80.jpg" class="film"></div>
+      </span>
+    </div>
+    <div class="carousel-item">
+      <div class="movie"><img src="pic/m102.jpg" class="film"></div>
+      <div class="movie"><img src="pic/m103.jpg" class="film"></div>
+      <div class="movie"><img src="pic/m104.jpg" class="film"></div>
+      <span class="iphone">
+        <div class="movie"><img src="pic/m105.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m111.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m121.jpg" class="film"></div>
+      </span>
+    </div>
+    <div class="carousel-item">
+      <div class="movie"><img src="pic/m122.jpg" class="film"></div>
+      <div class="movie"><img src="pic/m123.jpg" class="film"></div>
+      <div class="movie"><img src="pic/m21.jpg" class="film"></div>
+      <span class="iphone">
+        <div class="movie"><img src="pic/m117.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m58.jpg" class="film"></div>
+        <div class="movie"><img src="pic/m36.jpg" class="film"></div>
+      </span>
+    </div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleControls7" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleControls7" role="button" data-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+</div>
+
+<div id="carouselExampleControls9" class="carousel slide" data-interval="false">
+  <div class="carousel-inner">
+    <div class="tag">Series</div>
+    <div class="carousel-item active">
+      <div class="movie"><img src="pic/s1.jpg" class="film"></div>
+      <div class="movie"><img src="pic/s2.jpg" class="film"></div>
+      <div class="movie"><img src="pic/s3.jpg" class="film"></div>
+      <span class="iphone">
+        <div class="movie"><img src="pic/s4.jpg" class="film"></div>
+        <div class="movie"><img src="pic/s5.jpg" class="film"></div>
+        <div class="movie"><img src="pic/s6.jpg" class="film"></div>
+      </span>
+    </div>
+    <div class="carousel-item">
+      <div class="movie"><img src="pic/s7.jpg" class="film"></div>
+      <div class="movie"><img src="pic/s8.jpg" class="film"></div>
+      <div class="movie"><img src="pic/s9.jpg" class="film"></div>
+      <span class="iphone">
+        <div class="movie"><img src="pic/s10.jpg" class="film"></div>
+        <div class="movie"><img src="pic/s11.jpg" class="film"></div>
+        <div class="movie"><img src="pic/s12.jpg" class="film"></div>
+      </span>
+    </div>
+    <div class="carousel-item">
+      <div class="movie"><img src="pic/s13.jpg" class="film"></div>
+      <div class="movie"><img src="pic/s14.jpg" class="film"></div>
+      <div class="movie"><img src="pic/s15.jpg" class="film"></div>
+      <span class="iphone">
+        <div class="movie"><img src="pic/s16.jpg" class="film"></div>
+        <div class="movie"><img src="pic/s17.jpg" class="film"></div>
+        <div class="movie"><img src="pic/s18.jpg" class="film"></div>
+      </span>
+    </div>
+    <div class="carousel-item">
+      <div class="movie"><img src="pic/s19.jpg" class="film"></div>
+      <div class="movie"><img src="pic/s20.jpg" class="film"></div>
+      <div class="movie"><img src="pic/s21.jpg" class="film"></div>
+      <span class="iphone">
+        <div class="movie"><img src="pic/s22.jpg" class="film"></div>
+        <div class="movie"><img src="pic/s23.jpg" class="film"></div>
+        <div class="movie"><img src="pic/s24.jpg" class="film"></div>
+      </span>
+    </div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleControls9" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleControls9" role="button" data-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+</div>
+
+    <!--FOOTER-->
+    <div class="credit">
+      <div class="social">
+        <i class="fa fa-twitter icon  t fa-3x"></i>
+        <i class="fa fa-facebook-official t icon fa-3x"></i>
+        <i class="fa fa-instagram icon t fa-3x"></i>
+        <i class="fa fa-youtube-play icon t fa-3x"></i>
+        <i class="fa fa-bell icon t fa-3x"></i>
+        <i class="fa fa-twitter-square icon t fa-3x"></i>
+        <i class="fa fa-facebook icon t fa-3x"></i>
+      </div>
+      <div class="info">
+        <table class="credit_info">
+          <tr>
+            <td><a href="">Audio and Subtitles</a></td>
+            <td><a href="">Audio Description</a></td>
+            <td><a href="">Help Centre</a></td>
+            <td><a href="">Gift Cards</a></td>
+          </tr>
+          <tr>
+            <td><a href="">Media Centre</a></td>
+            <td><a href="">Investor Relations</a></td>
+            <td><a href="">Jobs</a></td>
+            <td><a href="">Terms of Use</a></td>
+          </tr>
+          <tr>
+            <td><a href="">Privacy</a></td>
+            <td><a href="">Legal Notices</a></td>
+            <td><a href="">Cookie Preferences</a></td>
+            <td><a href="">Corporate Information</a></td>
+          </tr>
+          <tr>
+            <td><a href="">Contact Us</a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="cop">
+        <button class="service">Service Code</button><br><br>
+        <span>1940-2019 Dylflix, inc</span>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
